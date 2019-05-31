@@ -1,0 +1,24 @@
+{% extends "index.html" %}
+{% block btn %}
+    <table>
+        <caption style="font-weight: bold">Transformation status</caption>
+        <thead>
+            <tr>
+                <th>Transform#</th>
+                <th>Progress</th>
+                <th>Transformed file</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for dwnld in progress %}
+                {% for trsfrm_no in dwnld.keys() %}
+                    <tr id="dwnld-link{{trsfrm_no}}">
+                        <td><p style="font-weight: bold; color:brown;">{{trsfrm_no}}</p></td>    
+                        <td><progress id="prog{{trsfrm_no}}" value="{{ dwnld[trsfrm_no]['currVal'] }}" max="{{ dwnld[trsfrm_no]['maxVal'] }}"></progress></td>    
+                        <td><a target="_blank" style="color:darkgreen;">Download</a></td>
+                    </tr>
+                {% endfor %}
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

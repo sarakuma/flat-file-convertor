@@ -1,0 +1,134 @@
+body {
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "top"
+        "mid"
+        "down";
+    grid-gap: 50px;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    -ms-grid-rows: 0.5fr 50px 4fr 50px 0.5fr;
+    grid-template-rows: 0.5fr 4fr 0.5fr;
+    font-family: 'Gugi', cursive;
+    background-color:darkseagreen;
+    min-height: 100vh;
+}
+
+header {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: top;
+    font-family: 'Special Elite', cursive;
+    background-color: beige;
+    text-align: center;
+}
+
+
+main {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: mid;
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "left center right";
+    grid-gap: 30px;
+}
+
+#mid-left {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: left;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+section {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    grid-area: center;
+    font-family: 'Open Sans Condensed', sans-serif;
+    background-color: aquamarine;
+    width: 600px;
+}
+
+#mid-right {
+    -ms-grid-row: 1;
+    -ms-grid-column: 5;
+    grid-area: right;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+form {
+    width: 100%;
+}
+
+article {
+    background-color:darksalmon;
+    border-radius: 5px;
+}
+
+
+#submit-btn{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 10px 0px;
+}
+
+#label-for-file {
+    overflow: hidden;
+    position: relative;
+    background-color: plum;
+    border-radius: 3px;
+    font-weight: bold;
+    display: block;
+    width: 50%;
+    text-align: center;
+}
+
+#label-for-file:hover, input[type="submit"]:hover {
+    cursor: pointer;
+}
+
+#infil {
+    display:absolute;
+    opacity: 0;
+    height: 1px;
+}
+
+input[type="submit"] {
+    border: none;
+    border-radius: 2px;
+    font-family: 'Tulpen One', cursive;
+    font-size: 26px;
+    font-weight: bold;
+    background-color: coral;
+}
+
+table {
+    border: none;
+    text-align: center;
+}
+
+table tr:nth-child(odd) {
+    background-color: bisque;
+}
+
+table tr:nth-child(even) {
+    background-color: beige;
+}
+
+footer {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+    grid-area: down;
+    font-family: 'Just Another Hand', cursive;
+    background-color: beige;
+    text-align: center;
+}
