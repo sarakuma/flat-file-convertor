@@ -29,6 +29,7 @@ locally converts a delimited file
 ### To-dos
 
 * overcome excel limitations over number of rows
+* securely convert critical files locally in your machine
 * improve html layout & aesthetics
 * include functionality to merge multiple delimited files into an excel spreadsheet
 * include functionality to split multiple tabbed spreadsheet into delimited files
